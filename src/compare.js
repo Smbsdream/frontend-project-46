@@ -7,13 +7,14 @@ const compareObjects = (data1, data2) => {
   const result = sortKeys.map((key) => {
     if (!_.has(data2, key)) {
       return `\n - ${key}: ${data1[key]}`;
-    } else if (!_.has(data1, key)) {
-      return `\n + ${key}: ${data2[key]}`;
-    } else if (data1[key] !== data2[key]) {
-      return `\n - ${key}: ${data1[key]}\n + ${key}: ${data2[key]}`;
-    } else {
-      return `\n   ${key}: ${data1[key]}`;
     }
+    if (!_.has(data1, key)) {
+      return `\n + ${key}: ${data2[key]}`;
+    }
+    if (data1[key] !== data2[key]) {
+      return `\n - ${key}: ${data1[key]}\n + ${key}: ${data2[key]}`;
+    }
+    return `\n   ${key}: ${data1[key]}`;
   });
 
   return `{ ${result} \n}`;
