@@ -5,7 +5,10 @@ lint:
 	npx eslint .
 
 test:
-	npm test
+	npx jest
+
+test-coverage:
+	npx jest --coverage
 
 publish: 
 	npm publish --dry-run
