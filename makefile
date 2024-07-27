@@ -16,5 +16,5 @@ publish:
 json-diff:
 	gendiff  '__fixtures__/file1.json' '__fixtures__/file2.json'
 
-yml-diff:
-	gendiff  '__fixtures__/file1.yml' '__fixtures__/file2.yml'
+yaml-diff:
+	gendiff  '__fixtures__/file1.yaml' '__fixtures__/file2.yml'

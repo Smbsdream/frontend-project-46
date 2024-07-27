@@ -12,10 +12,14 @@ const getFixturePath = (filename) => path
 const readFile = (filename) => fs
   .readFileSync(getFixturePath(filename), 'utf-8');
 
-const file1 = '__fixtures__/file1.json';
-const file2 = '__fixtures__/file2.json';
+const filepath1 = getFixturePath('file1.json');
+const filepath2 = getFixturePath('file2.json');
+const filepath3 = getFixturePath('file1.yaml');
+const filepath4 = getFixturePath('file2.yml');
+
 const expectedResult = readFile('expectedResultJson.txt');
 
 test('compare files', () => {
-  expect(genDiff(file1, file2)).toBe(expectedResult);
+  expect(genDiff(filepath1, filepath2)).toBe(expectedResult);
+  expect(genDiff(filepath3, filepath4)).toBe(expectedResult);
 });
