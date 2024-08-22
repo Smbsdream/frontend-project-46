@@ -1,23 +1,35 @@
 import _ from 'lodash';
 
-const compareObjects = (data1, data2) => {
-  const unionKeys = Object.keys({ ...data1, ...data2 });
-  const sortedKeys = _.sortBy(unionKeys);
+const compareObjects = (object1, object2) => {
+  const unionKeys = Object.keys({ ...object1, ...object2 });
+  const sortKeys = _.sortBy(unionKeys);
 
-  const result = sortedKeys.map((key) => {
-    if (!_.has(data2, key)) {
-      return `  - ${key}: ${data1[key]}`;
+  const result = sortKeys.map((key) => {
+    if (_.isObject(object1[key]) && _.isObject(object2[key])) {
+      return {
+        key,
+        type: 'nested',
+        children: compareObjects(object1[key], object2[key]),
+      };
     }
-    if (!_.has(data1, key)) {
-      return `  + ${key}: ${data2[key]}`;
+    if (!_.has(object1, key)) {
+      return { key, type: 'added', value: object2[key] };
     }
-    if (data1[key] !== data2[key]) {
-      return `  - ${key}: ${data1[key]}\n  + ${key}: ${data2[key]}`;
+    if (!_.has(object2, key)) {
+      return { key, type: 'deleted', value: object1[key] };
     }
-    return `    ${key}: ${data1[key]}`;
+    if (object1[key] !== object2[key]) {
+      return {
+        key,
+        type: 'changed',
+        value1: object1[key],
+        value2: object2[key],
+      };
+    }
+    return { key, type: 'unchanged', value: object1[key] };
   });
 
-  return `{\n${result.join('\n')}\n}`;
+  return result;
 };
 
 export default compareObjects;
