@@ -15,11 +15,16 @@ const filepath3 = getFixturePath('file1.yaml');
 const filepath4 = getFixturePath('file2.yml');
 
 test('compare stylish', () => {
-  const expectedStylish = readFile('expexted_stylish.txt');
+  const expectedStylish = readFile('expected_stylish.txt');
   expect(genDiff(filepath1, filepath2)).toBe(expectedStylish);
 });
 
 test('compare plain', () => {
-  const expectedPlain = readFile('expexted_plain.txt');
+  const expectedPlain = readFile('expected_plain.txt');
   expect(genDiff(filepath3, filepath4, 'plain')).toBe(expectedPlain);
+});
+
+test('compare json', () => {
+  const expectedJson = readFile('expected_json.txt');
+  expect(genDiff(filepath3, filepath4, 'json')).toBe(expectedJson);
 });
