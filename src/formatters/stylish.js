@@ -29,8 +29,8 @@ const stylish = (diff) => {
     const newData = node.flatMap((item) => {
       const { key, type, value } = item;
       switch (type) {
-        case 'deleted':
         case 'added':
+        case 'deleted':
         case 'unchanged':
           return `${indent}${markers[type]} ${key}: ${stringify(value, depth + 1)}`;
         case 'changed':
