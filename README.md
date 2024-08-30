@@ -10,18 +10,19 @@ Possible output options:
 
 ## Installation
 
-```bash
+```
   $ git clone <your link>
   $ cd gendiff
   $ make install
   $ nmp link
 ```
+
 ## Usage
 
 To call help use the flag -h or --help:
 
 ```
-  gendiff -h
+  $ gendiff -h
 ```
 
 ```
@@ -37,22 +38,17 @@ To call help use the flag -h or --help:
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/nzVenDRTts9gL4c5fxfsZSKVH.svg)](https://asciinema.org/a/nzVenDRTts9gL4c5fxfsZSKVH)
+[![asciicast](https://asciinema.org/a/va0ufa7kADMGQ3S32WTUrQ9Ck.svg)](https://asciinema.org/a/va0ufa7kADMGQ3S32WTUrQ9Ck)
 
 ## Running tests and linters
 
 ```
-  make test
-  make lint
+  $ make test
+  $ make lint
 ```
 
 ## Badges
 
-### GitHub Actions:
-
-[![GitHub Actions](https://github.com/Smbsdream/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Smbsdream/frontend-project-46/actions/workflows/hexlet-check.yml)
-
-### Code quality maintainability and test coverage:
-
+[![Run ESLint and automation tests](https://github.com/Smbsdream/gendiff/actions/workflows/main.yml/badge.svg)](https://github.com/Smbsdream/gendiff/actions/workflows/main.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/79288441bac31cb1e4b4/maintainability)](https://codeclimate.com/github/Smbsdream/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/79288441bac31cb1e4b4/test_coverage)](https://codeclimate.com/github/Smbsdream/frontend-project-46/test_coverage)
