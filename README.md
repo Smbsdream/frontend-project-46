@@ -1,6 +1,52 @@
-### Hexlet tests and linter status:
+# Difference Generator
 
-[![Actions Status](https://github.com/Smbsdream/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Smbsdream/frontend-project-46/actions)
+Difference Generator - package compares two configuration files (_.json_, _.yaml_ extensions) and shows a difference.
+
+Possible output options:
+
+- `"stylish"`: tree structure
+- `"plain"`: plain text
+- `"json"`: json string
+
+## Installation
+
+```
+  git clone <your________>   Поменять!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  cd gendiff
+  make install
+  nmp link
+```
+## Usage
+
+To call help use the flag -h or --help:
+
+```
+  gendiff -h
+```
+
+```
+  Usage: gendiff [options] <filepath1> <filepath2>
+
+  Compares two configuration files and shows a difference.
+
+  Options:
+    -V, --version        output the version number
+    -f, --format <type>  output format (default: "stylish")
+    -h, --help           display help for command
+```
+
+## Demo
+
+[![asciicast](https://asciinema.org/a/nzVenDRTts9gL4c5fxfsZSKVH.svg)](https://asciinema.org/a/nzVenDRTts9gL4c5fxfsZSKVH)
+
+## Running tests and linters
+
+```
+  make test
+  make lint
+```
+
+## Badges
 
 ### GitHub Actions:
 

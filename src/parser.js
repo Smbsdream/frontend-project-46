@@ -8,7 +8,7 @@ const parseData = (data, format) => {
     case 'yaml':
       return YAML.load(data);
     default:
-      throw new Error('no extention');
+      throw new Error(`${format} not supported`);
   }
 };
 

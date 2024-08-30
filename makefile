@@ -1,6 +1,9 @@
 install:
 	npm ci
 
+link:
+	npm link
+
 lint:
 	npx eslint .
 
@@ -17,4 +20,4 @@ json-diff:
 	gendiff  '__fixtures__/file1.json' '__fixtures__/file2.json'
 
 yaml-diff:
-	gendiff  '__fixtures__/file1.yaml' '__fixtures__/file2.yml'
+	gendiff -f plain '__fixtures__/file1.yaml' '__fixtures__/file2.yml'
