@@ -10,11 +10,11 @@ Possible output options:
 
 ## Installation
 
-```
-  git clone <your________>   Поменять!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  cd gendiff
-  make install
-  nmp link
+```bash
+  $ git clone <your link>
+  $ cd gendiff
+  $ make install
+  $ nmp link
 ```
 ## Usage
 
@@ -50,7 +50,7 @@ To call help use the flag -h or --help:
 
 ### GitHub Actions:
 
-[![hexlet-check](https://github.com/Smbsdream/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Smbsdream/frontend-project-46/actions/workflows/hexlet-check.yml)
+[![GitHub Actions](https://github.com/Smbsdream/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Smbsdream/frontend-project-46/actions/workflows/hexlet-check.yml)
 
 ### Code quality maintainability and test coverage:
 
